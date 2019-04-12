@@ -35,28 +35,28 @@ head(sex_y2)
 summary(sex_y2)
 
 #==============================================================
-# 5. if LBXHE1 is 2 and other 7 columns are all nas, then Y is 2
+# 3. if LBXHE1 is 2 and other 7 columns are all nas, then Y is 2
 index_LBXHE1_2 <-  which((is.na(sex1314$LBXHE2)) & (is.na(sex1314$LBDHI)) & (is.na(sex1314$SXQ753)) & (is.na(sex1314$SXQ260)) & (is.na(sex1314$SXQ265)) & (is.na(sex1314$SXQ270)) & (is.na(sex1314$SXQ272)) & (sex1314$LBXHE1 == 2.0))
 new_column_Y[index_LBXHE1_2] <- 2
 sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
 summary(sex_y2)
 
 #==============================================================
-# 6. if LBXHE2 is 2 and other 7 columns are all nas, then Y is 2
+# 4. if LBXHE2 is 2 and other 7 columns are all nas, then Y is 2
 index_LBXHE2_2 <- which((is.na(sex1314$LBXHE1)) & (is.na(sex1314$LBXHE2)) & (is.na(sex1314$SXQ753)) & (is.na(sex1314$SXQ260)) & (is.na(sex1314$SXQ265)) & (is.na(sex1314$SXQ270)) & (is.na(sex1314$SXQ272)) & (sex1314$LBDHI == 2.0))
 new_column_Y[index_LBXHE2_2] <- 2
 sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
 summary(sex_y2)
 
 #==============================================================
-# 7. if LBDHI is 2 and other 7 columns are all nas, then Y is 2
+# 5. if LBDHI is 2 and other 7 columns are all nas, then Y is 2
 index_LBDHI_2 <- which((is.na(sex1314$LBXHE1)) & (is.na(sex1314$LBDHI)) & (is.na(sex1314$SXQ753)) & (is.na(sex1314$SXQ260)) & (is.na(sex1314$SXQ265)) & (is.na(sex1314$SXQ270)) & (is.na(sex1314$SXQ272)) & (sex1314$LBXHE2 == 2.0))
 new_column_Y[index_LBDHI_2] <- 2
 sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
 summary(sex_y2)
 
 #==============================================================
-# 7. if first two columns are 2s and other 6 columns are all nas, then Y is 2
+# 6. if first two columns are 2s and other 6 columns are all nas, then Y is 2
 index_two_2 <- which((is.na(sex1314$LBDHI)) & (is.na(sex1314$SXQ753)) & (is.na(sex1314$SXQ260)) & (is.na(sex1314$SXQ265)) & (is.na(sex1314$SXQ270)) & (is.na(sex1314$SXQ272)) & (sex1314$LBXHE2 == 2.0) & (sex1314$LBXHE1 == 2.0))
 new_column_Y[index_two_2] <- 2
 sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
@@ -91,35 +91,35 @@ sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
 summary(sex_y2)
 
 #==============================================================
-# 10. if first three columns are nas and 4 columns are all 2s, then Y is 2
+# 11. if first three columns are nas and 4 columns are all 2s, then Y is 2
 index_three_na <- which((is.na(sex1314$LBXHE1)) & (is.na(sex1314$LBXHE2)) & (is.na(sex1314$LBDHI)) & (sex1314$SXQ753 == 2.0) & (sex1314$SXQ260 == 2.0) & (sex1314$SXQ265 == 2.0) & (sex1314$SXQ270 == 2.0) & (is.na(sex1314$SXQ272)))
 new_column_Y[index_three_na] <- 2
 sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
 summary(sex_y2)
 
 #==============================================================
-# 10. if first four columns are nas and 3 columns are all 2s, then Y is 2
+# 12. if first four columns are nas and 3 columns are all 2s, then Y is 2
 index_four_na <- which((is.na(sex1314$LBXHE1)) & (is.na(sex1314$LBXHE2)) & (is.na(sex1314$LBDHI)) & (is.na(sex1314$SXQ753)) & (sex1314$SXQ260 == 2.0) & (sex1314$SXQ265 == 2.0) & (sex1314$SXQ270 == 2.0) & (is.na(sex1314$SXQ272)))
 new_column_Y[index_four_na] <- 2
 sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
 summary(sex_y2)
 
 #==============================================================
-# 11. if first 2 columns are 2s, LBDHI is 3 and other columns are nas, then Y is 2
+# 13. if first 2 columns are 2s, LBDHI is 3 and other columns are nas, then Y is 2
 index_spe_1 <- which((is.na(sex1314$SXQ753)) & (is.na(sex1314$SXQ260)) & (is.na(sex1314$SXQ265)) & (is.na(sex1314$SXQ270)) & (is.na(sex1314$SXQ272)) & (sex1314$LBDHI == 3.0) & (sex1314$LBXHE1 == 2.0) & (sex1314$LBXHE2 == 2.0))
 new_column_Y[index_spe_1] <- 2
 sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
 summary(sex_y2)
 
 #==============================================================
-# 12. if first four columns are nas, SXQ272 is 7 and other 3 columns are 2, then Y is 2
+# 14. if first four columns are nas, SXQ272 is 7 and other 3 columns are 2, then Y is 2
 index_spe_2 <- which((is.na(sex1314$LBXHE1)) & (is.na(sex1314$LBXHE2)) & (is.na(sex1314$LBDHI)) & (is.na(sex1314$SXQ753)) & (sex1314$SXQ260 == 2.0) & (sex1314$SXQ265 == 2.0) & (sex1314$SXQ270 == 2.0) & (sex1314$SXQ272 == 7.0))
 new_column_Y[index_spe_2] <- 2
 sex_y2 <- as.data.frame(cbind(sex1314, new_column_Y))
 summary(sex_y2)
 
 #==============================================================
-# 3. have 1, Y is 1
+# 15. have 1, Y is 1
 index_one_1 <- which((sex1314$LBXHE1 == 1.0))
 index_two_1 <- which((sex1314$LBXHE2 == 1.0))
 index_three_1 <- which((sex1314$LBDHI == 1.0))
@@ -183,28 +183,28 @@ head(sex_y3)
 summary(sex_y3)
 
 #==============================================================
-# 5. if LBXHE1 is 2 and other 7 columns are all nas, then Y is 2
+# 3. if LBXHE1 is 2 and other 7 columns are all nas, then Y is 2
 index_LBXHE1_2 <-  which((is.na(sex1516$LBXHE2)) & (is.na(sex1516$LBXHIVC)) & (is.na(sex1516$SXQ753)) & (is.na(sex1516$SXQ260)) & (is.na(sex1516$SXQ265)) & (is.na(sex1516$SXQ270)) & (is.na(sex1516$SXQ272)) & (sex1516$LBXHE1 == 2.0))
 new_column_Y[index_LBXHE1_2] <- 2
 sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
 summary(sex_y3)
 
 #==============================================================
-# 6. if LBXHE2 is 2 and other 7 columns are all nas, then Y is 2
+# 4. if LBXHE2 is 2 and other 7 columns are all nas, then Y is 2
 index_LBXHE2_2 <- which((is.na(sex1516$LBXHE1)) & (is.na(sex1516$LBXHE2)) & (is.na(sex1516$SXQ753)) & (is.na(sex1516$SXQ260)) & (is.na(sex1516$SXQ265)) & (is.na(sex1516$SXQ270)) & (is.na(sex1516$SXQ272)) & (sex1516$LBXHIVC == 2.0))
 new_column_Y[index_LBXHE2_2] <- 2
 sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
 summary(sex_y3)
 
 #==============================================================
-# 7. if LBXHIVC is 2 and other 7 columns are all nas, then Y is 2
+# 5. if LBXHIVC is 2 and other 7 columns are all nas, then Y is 2
 index_LBDHI_2 <- which((is.na(sex1516$LBXHE1)) & (is.na(sex1516$LBXHIVC)) & (is.na(sex1516$SXQ753)) & (is.na(sex1516$SXQ260)) & (is.na(sex1516$SXQ265)) & (is.na(sex1516$SXQ270)) & (is.na(sex1516$SXQ272)) & (sex1516$LBXHE2 == 2.0))
 new_column_Y[index_LBDHI_2] <- 2
 sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
 summary(sex_y3)
 
 #==============================================================
-# 7. if first two columns are 2s and other 6 columns are all nas, then Y is 2
+# 6. if first two columns are 2s and other 6 columns are all nas, then Y is 2
 index_two_2 <- which((is.na(sex1516$LBXHIVC)) & (is.na(sex1516$SXQ753)) & (is.na(sex1516$SXQ260)) & (is.na(sex1516$SXQ265)) & (is.na(sex1516$SXQ270)) & (is.na(sex1516$SXQ272)) & (sex1516$LBXHE2 == 2.0) & (sex1516$LBXHE1 == 2.0))
 new_column_Y[index_two_2] <- 2
 sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
@@ -239,35 +239,35 @@ sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
 summary(sex_y3)
 
 #==============================================================
-# 10. if first three columns are nas and 4 columns are all 2s, then Y is 2
+# 11. if first three columns are nas and 4 columns are all 2s, then Y is 2
 index_three_na <- which((is.na(sex1516$LBXHE1)) & (is.na(sex1516$LBXHE2)) & (is.na(sex1516$LBXHIVC)) & (sex1516$SXQ753 == 2.0) & (sex1516$SXQ260 == 2.0) & (sex1516$SXQ265 == 2.0) & (sex1516$SXQ270 == 2.0) & (is.na(sex1516$SXQ272)))
 new_column_Y[index_three_na] <- 2
 sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
 summary(sex_y3)
 
 #==============================================================
-# 10. if first four columns are nas and 3 columns are all 2s, then Y is 2
+# 12. if first four columns are nas and 3 columns are all 2s, then Y is 2
 index_four_na <- which((is.na(sex1516$LBXHE1)) & (is.na(sex1516$LBXHE2)) & (is.na(sex1516$LBXHIVC)) & (is.na(sex1516$SXQ753)) & (sex1516$SXQ260 == 2.0) & (sex1516$SXQ265 == 2.0) & (sex1516$SXQ270 == 2.0) & (is.na(sex1516$SXQ272)))
 new_column_Y[index_four_na] <- 2
 sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
 summary(sex_y3)
 
 #==============================================================
-# 5. if LBXHE1 is 3 and other 7 columns are all nas, then Y is 2
+# 13. if LBXHE1 is 3 and other 7 columns are all nas, then Y is 2
 index_spe_1 <-  which((is.na(sex1516$LBXHE2)) & (is.na(sex1516$LBXHIVC)) & (is.na(sex1516$SXQ753)) & (is.na(sex1516$SXQ260)) & (is.na(sex1516$SXQ265)) & (is.na(sex1516$SXQ270)) & (is.na(sex1516$SXQ272)) & (sex1516$LBXHE1 == 3.0))
 new_column_Y[index_spe_1] <- 2
 sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
 summary(sex_y3)
 
 #==============================================================
-# 12. if first three columns are nas, SXQ272 is 7, SXQ270 SXQ260 are 9s, then Y is 2
+# 14. if first three columns are nas, SXQ272 is 7, SXQ270 SXQ260 are 9s, then Y is 2
 index_spe_2 <- which((is.na(sex1516$LBXHE1)) & (is.na(sex1516$LBXHE2)) & (is.na(sex1516$LBXHIVC)) & (sex1516$SXQ753 == 2.0) & (sex1516$SXQ260 == 9.0) & (sex1516$SXQ265 == 2.0) & (sex1516$SXQ270 == 9.0) & (sex1516$SXQ272 == 7.0))
 new_column_Y[index_spe_2] <- 2
 sex_y3 <- as.data.frame(cbind(sex1516, new_column_Y))
 summary(sex_y3)
 
 #==============================================================
-# 3. have 1, Y is 1
+# 15. have 1, Y is 1
 index_one_1 <- which((sex1516$LBXHE1 == 1.0))
 index_two_1 <- which((sex1516$LBXHE2 == 1.0))
 index_three_1 <- which((sex1516$LBXHIVC == 1.0))
