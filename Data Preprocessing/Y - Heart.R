@@ -91,35 +91,35 @@ heart_y2 <- as.data.frame(cbind(heart1314, new_column_Y))
 summary(heart_y2)
 
 #==============================================================
-# 10. if MCQ160D is 7or9 and other 3 columns are all 2s, then Y is 2
+# 11. if MCQ160D is 7or9 and other 3 columns are all 2s, then Y is 2
 index_7_d <- which((heart1314$MCQ160D == 7.0 || 9.0) & (heart1314$MCQ160B == 2.0) & (heart1314$MCQ160C == 2.0) & (heart1314$MCQ160E == 2.0))
 new_column_Y[index_7_d] <- 2
 heart_y2 <- as.data.frame(cbind(heart1314, new_column_Y))
 summary(heart_y2)
 
 #==============================================================
-# 10. if MCQ160E is 7or9 and other 3 columns are all 2s, then Y is 2
+# 12. if MCQ160E is 7or9 and other 3 columns are all 2s, then Y is 2
 index_7_e <- which((heart1314$MCQ160E == 7.0 || 9.0) & (heart1314$MCQ160B == 2.0) & (heart1314$MCQ160C == 2.0) & (heart1314$MCQ160D == 2.0))
 new_column_Y[index_7_e] <- 2
 heart_y2 <- as.data.frame(cbind(heart1314, new_column_Y))
 summary(heart_y2)
 
 #==============================================================
-# 10. if MCQ160B, MCQ160C and MCQ160D is 9 and last column is 2, then Y is 2
+# 13. if MCQ160B, MCQ160C and MCQ160D is 9 and last column is 2, then Y is 2
 index_special <- which((heart1314$MCQ160B == 9.0) & (heart1314$MCQ160D == 9.0) & (heart1314$MCQ160C == 9.0) & (heart1314$MCQ160E == 2.0))
 new_column_Y[index_special] <- 2
 heart_y2 <- as.data.frame(cbind(heart1314, new_column_Y))
 summary(heart_y2)
 
 #==============================================================
-# 10. if MCQ160B and MCQ160C is 9 and other 2 columns are all 2s, then Y is 2
+# 14. if MCQ160B and MCQ160C is 9 and other 2 columns are all 2s, then Y is 2
 index_special <- which((heart1314$MCQ160B == 9.0) & (heart1314$MCQ160C == 9.0) & (heart1314$MCQ160D == 2.0) & (heart1314$MCQ160E == 2.0))
 new_column_Y[index_special] <- 2
 heart_y2 <- as.data.frame(cbind(heart1314, new_column_Y))
 summary(heart_y2)
 
 #==============================================================
-# 3. have 1, Y is 1
+# 15. have 1, Y is 1
 index_one_1 <- which((heart1314$MCQ160B == 1.0))
 index_two_1 <- which((heart1314$MCQ160C == 1.0))
 index_three_1 <- which((heart1314$MCQ160D == 1.0))
@@ -230,28 +230,28 @@ heart_y3 <- as.data.frame(cbind(heart1516, new_column_Y))
 summary(heart_y3)
 
 #==============================================================
-# 10. if MCQ160D is 7or9 and other 3 columns are all 2s, then Y is 2
+# 11. if MCQ160D is 7or9 and other 3 columns are all 2s, then Y is 2
 index_7_d <- which((heart1516$MCQ160D == 7.0 || 9.0) & (heart1516$MCQ160B == 2.0) & (heart1516$MCQ160C == 2.0) & (heart1516$MCQ160E == 2.0))
 new_column_Y[index_7_d] <- 2
 heart_y3 <- as.data.frame(cbind(heart1516, new_column_Y))
 summary(heart_y3)
 
 #==============================================================
-# 10. if MCQ160E is 7or9 and other 3 columns are all 2s, then Y is 2
+# 12. if MCQ160E is 7or9 and other 3 columns are all 2s, then Y is 2
 index_7_e <- which((heart1516$MCQ160E == 7.0 || 9.0) & (heart1516$MCQ160B == 2.0) & (heart1516$MCQ160C == 2.0) & (heart1516$MCQ160D == 2.0))
 new_column_Y[index_7_e] <- 2
 heart_y3 <- as.data.frame(cbind(heart1516, new_column_Y))
 summary(heart_y3)
 
 #==============================================================
-# 10. if MCQ160B, MCQ160C and MCQ160D is 9 and last column is 2, then Y is 2
+# 13. if MCQ160B, MCQ160C and MCQ160D is 9 and last column is 2, then Y is 2
 index_special <- which((heart1516$MCQ160B == 9.0) & (heart1516$MCQ160D == 9.0) & (heart1516$MCQ160C == 9.0) & (heart1516$MCQ160E == 2.0))
 new_column_Y[index_special] <- 2
 heart_y3 <- as.data.frame(cbind(heart1516, new_column_Y))
 summary(heart_y3)
 
 #==============================================================
-# 3. have 1, Y is 1
+# 14. have 1, Y is 1
 index_one_1 <- which((heart1516$MCQ160B == 1.0))
 index_two_1 <- which((heart1516$MCQ160C == 1.0))
 index_three_1 <- which((heart1516$MCQ160D == 1.0))
