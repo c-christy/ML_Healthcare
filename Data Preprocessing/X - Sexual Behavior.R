@@ -17,7 +17,7 @@ summary(real_my_data2)
 # 2. create a new column for each column that contain NAs.
 # 3. new column: 0 for non-missing value from original column,
 #                1 for missing value from original column. 
-#               0 for value of 777777/99999. 
+#                0 for value of 777777/99999. 
 # 4. original column: 0 for NAs. 
 #                     0 for extreme values also. 
 
@@ -320,7 +320,7 @@ summary(real_my_data3)
 # 2. create a new column for each column that contain NAs.
 # 3. new column: 0 for non-missing value from original column,
 #                1 for missing value from original column. 
-#               0 for value of 777777/99999. 
+#                0 for value of 777777/99999. 
 # 4. original column: 0 for NAs. 
 #                     0 for extreme values also. 
 
